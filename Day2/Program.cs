@@ -1,5 +1,4 @@
 ﻿using Common.Parsing;
-using Common.Parsing.Interfaces;
 using Day2;
 
 Console.WriteLine("Day 2");

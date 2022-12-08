@@ -1,6 +1,5 @@
 ﻿using System.Collections.Immutable;
 using Common.Parsing;
-using Common.Parsing.Interfaces;
 using Day3;
 
 Console.WriteLine("Day 3");
