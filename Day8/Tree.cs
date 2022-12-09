@@ -4,7 +4,7 @@ public record Tree(int Height, Point Point, int EdgeX, int EdgeY)
 {
     public bool IsVisible(IEnumerable<Tree> trees)
     {
-        Mode mode = Mode.IsVisable;
+        Mode mode = Mode.IsVisible;
         if (this.IsEdge(mode))
             return true;
 
@@ -81,16 +81,16 @@ public record Tree(int Height, Point Point, int EdgeX, int EdgeY)
     public bool IsEdge(Mode mode, Func<Point, Point>? traverser = null)
     {
         var directionPoint = traverser(this.Point);
-        if (this.Point.Y == 0 && (mode == Mode.IsVisable || directionPoint.Y == -1))
+        if (this.Point.Y == 0 && (mode == Mode.IsVisible || directionPoint.Y == -1))
             return true;
 
-        if (this.Point.X == 0 && (mode == Mode.IsVisable || directionPoint.X == -1))
+        if (this.Point.X == 0 && (mode == Mode.IsVisible || directionPoint.X == -1))
             return true;
 
-        if (this.Point.Y == EdgeY && (mode == Mode.IsVisable || directionPoint.Y == EdgeY + 1))
+        if (this.Point.Y == EdgeY && (mode == Mode.IsVisible || directionPoint.Y == EdgeY + 1))
             return true;
 
-        if (this.Point.X == EdgeX && (mode == Mode.IsVisable || directionPoint.X == EdgeX + 1))
+        if (this.Point.X == EdgeX && (mode == Mode.IsVisible || directionPoint.X == EdgeX + 1))
             return true;
 
         return false;
@@ -98,7 +98,7 @@ public record Tree(int Height, Point Point, int EdgeX, int EdgeY)
 
     public enum Mode
     {
-        IsVisable,
+        IsVisible,
         Scenic
     }
 }
