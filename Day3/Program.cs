@@ -27,7 +27,8 @@ var rucksacks = textRows.Select(textRow =>
 
 var duplicates = rucksacks.Select(rucksack => rucksack.FindDuplicate()).ToArray();
 
-List<string> letters = new List<string> {
+List<string> letters = new List<string>
+{
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
