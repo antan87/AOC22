@@ -26,25 +26,37 @@ public record Tail : IHead
         if (Math.Abs(distanceX) >= 1 && Math.Abs(distanceY) >= 1)
         {
             if (Math.Abs(distanceX) > 1)
+            {
                 newX = distanceX < 0 ? this.Point.X - 1 : this.Point.X + 1;
+            }
             else
+            {
                 newX = head.Point.X;
+            }
 
             if (Math.Abs(distanceY) > 1)
+            {
                 newY = distanceY < 0 ? this.Point.Y - 1 : this.Point.Y + 1;
+            }
             else
+            {
                 newY = head.Point.Y;
+            }
 
             return this with { Point = new Point(newY, newX) };
         }
 
         if (Math.Abs(distanceX) > 0)
+        {
             newX = distanceX < 0 ? this.Point.X - 1 : this.Point.X + 1;
+        }
         else
             newX = this.Point.X;
 
         if (Math.Abs(distanceY) > 0)
+        {
             newY = distanceY < 0 ? this.Point.Y - 1 : this.Point.Y + 1;
+        }
         else
             newY = this.Point.Y;
 
