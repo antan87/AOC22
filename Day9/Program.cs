@@ -3,8 +3,6 @@ using Day9;
 
 Console.WriteLine("Day 9");
 Console.WriteLine();
-Console.WriteLine("Part 1");
-Console.WriteLine();
 
 string inputFile = @"Day9.Input.txt";
 var input = await ParseHelper.GetInput(inputFile);
